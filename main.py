@@ -1,4 +1,4 @@
-from regression import linearRegression
+from src.regression import linearRegression
 
 def main():
     linearRegression()
