@@ -36,4 +36,5 @@ If you encounter any issues or have questions about this project, you can:
 ## References
 
 ### Training Dataset
-Huge thanks to University of California Irvine for providing the training data. You can find them [here](https://archive.ics.uci.edu/).
+
+- Huge thanks to University of California Irvine for providing the training data. You can find them [here](https://archive.ics.uci.edu/).
