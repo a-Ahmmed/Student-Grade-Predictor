@@ -6,7 +6,7 @@ from sklearn.utils import shuffle
 
 def linearRegression(inputData: list) -> str:
     # Read in data and trim
-    data = pd.read_csv("data/student_mat_2173a47420.csv", sep=';')
+    data = pd.read_csv("data/student-mat.csv", sep=';')
     data = data[["G1", "G2", "G3", "studytime", "failures", "absences"]] # G references grade period 1 = First period 2 = Second period 3 = Final
 
     # Prediction for later (Can be changed)
