@@ -12,7 +12,7 @@ This Python application predicts student grades using a Linear Regression Machin
 ### Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/student-grade-predictor.git
+   git clone https://github.com/a-Ahmmed/student-grade-predictor.git
 
    cd student-grade-predictor
 2. Install the necessary dependencies:
