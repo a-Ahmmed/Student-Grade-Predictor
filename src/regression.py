@@ -4,7 +4,7 @@ import sklearn
 from sklearn import linear_model
 from sklearn.utils import shuffle
 
-def linearRegression():
+def linearRegression(inputData: list) -> str:
     # Read in data and trim
     data = pd.read_csv("data/student_mat_2173a47420.csv", sep=';')
     data = data[["G1", "G2", "G3", "studytime", "failures", "absences"]] # G references grade period 1 = First period 2 = Second period 3 = Final
@@ -24,9 +24,15 @@ def linearRegression():
     linear.fit(trainingDataX, trainingDataY)
     accuracy = linear.score(testDataX, testDataY) # How accurate our line of best fit is
 
-    # Get predictions given our test data (testDataX)
-    predictions = linear.predict(testDataX)
+    def testModel():
+        # Get predictions given our test data (testDataX)
+        predictions = linear.predict(testDataX)
 
-    # Compare our predictions to actual student results (testDataY)
-    for index, predictionValue in enumerate(predictions):
-        print(f'Input Data: {testDataX[index]}\nPredicted Result: {predictionValue:.2f}\nActual Result: {testDataY[index]}\n')
+        # Compare our predictions to actual student results (testDataY)
+        for index, predictionValue in enumerate(predictions):
+            print(f'Input Data: {testDataX[index]}\nPredicted Result: {predictionValue:.2f}\nActual Result: {testDataY[index]}\n')
+
+    # Reformat input array into numpy array
+    inputData = np.array(inputData)
+
+    return f'Predicted Grade: {linear.predict([inputData])[0]:.2f}'
