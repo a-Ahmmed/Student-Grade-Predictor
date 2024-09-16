@@ -9,11 +9,10 @@ def main():
         print("To be implemented.\nExiting...")
     else:
         userInput = []
-        userInput.append(input("Enter Semester 1 grade: "))
-        userInput.append(input("Enter Semester 2 grade: "))
-        userInput.append(input("Enter Study Time (hours): "))
-        userInput.append(input("Enter No. of Failures: "))
-        userInput.append(input("Enter No. of Absences: "))
+        questions = ["Enter Semester 1 grade: ", "Enter Semester 2 grade: ", "Enter Study Time (hours): ", "Enter No. of Failures: ", "Enter No. of Absences: "]
+    
+        for q in questions:
+            userInput.append(input(q))
         print()
         
         try:
